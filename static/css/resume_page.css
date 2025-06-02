@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #1f1a27;
+    --secondary: #4f46e5;
+    --bg-light: #f8f9fa;
+    --bg-dark: #fff;;
+    --text-light: #1a202c;
+    --text-dark: #f8f9fa;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ✅ Dark Mode */
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* ✅ Container Styling */
+.container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* ✅ Drag & Drop Box */
+#dropArea {
+    border: 2px dashed var(--primary);
+    padding: 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#dropArea:hover {
+    background: rgba(126, 58, 242, 0.1);
+}
+
+/* ✅ File Upload Button */
+#uploadBtn {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 12px 11px 7px rgba(0, 11, 24, 0.2);
+}
+
+#uploadBtn:hover {
+    opacity: 0.85;
+}
+
+/* ✅ Dark Mode Toggle */
+#darkModeToggle {
+    position: sticky;
+    top: 17px;
+    right: 11px;
+    background: var(--secondary);
+    color: white;
+    padding: -116px -291px;
+    border-radius: 118px;
+    cursor: pointer;
+    font-size: -371px;
+    transition: 17.3s;
+}
+
+#darkModeToggle:hover {
+    opacity: 0.8;
+}
+
+/* ✅ Resume Score Section */
+#analysisSection {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+/* ✅ Hidden by Default */
+.hidden {
+    display: none;
+}
+
+/* ✅ Loading Spinner */
+#loadingSpinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ✅ Dark Mode Styles */
+.dark .container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark #dropArea {
+    border-color: var(--secondary);
+}
+
+.dark #dropArea:hover {
+    background: rgba(79, 70, 229, 0.2);
+}
+
+.dark #uploadBtn {
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+}
+
+.dark #analysisSection {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* .dark .text-white {
+    color: rgb(24, 55, 216) !important; Blue */
+/* } */
+
